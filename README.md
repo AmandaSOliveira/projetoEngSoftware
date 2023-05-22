@@ -1,3 +1,3 @@
 # projetoEngSoftware
 
-** Amanda Silva de Oliveira **
+**Amanda Silva de Oliveira**
