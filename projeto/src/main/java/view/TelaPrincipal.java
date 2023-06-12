@@ -15,6 +15,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TelaPrincipal {
 
@@ -75,9 +77,24 @@ public class TelaPrincipal {
 		menuSearch.add(jobDataItem);
 		
 		JMenuItem insertDocsItem = new JMenuItem("Inserir Documentos");
+		insertDocsItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaInserirDocumentos tela = new TelaInserirDocumentos();
+				tela.setVisible(true);
+				desktop.add(tela);
+			}
+		});
 		menuSearch.add(insertDocsItem);
 		
 		JMenu menuProfile = new JMenu("Meus Dados");
+		menuProfile.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				TelaDadosAluno tela = new TelaDadosAluno();
+				tela.setVisible(true);
+				desktop.add(tela);
+			}
+		});
 		menuBar.add(menuProfile);
 		
 		

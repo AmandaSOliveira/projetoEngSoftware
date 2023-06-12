@@ -51,15 +51,20 @@ public class TelaDetalhesEstagio extends JInternalFrame {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 11, 414, 248);
+		getContentPane().add(panel);
+		panel.setLayout(null);
+		
 		JLabel lblTitle = new JLabel("Detalhes do Estágio");
+		lblTitle.setBounds(0, 0, 414, 14);
+		panel.add(lblTitle);
 		lblTitle.setFont(new Font("Tahoma", Font.BOLD, 12));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(10, 11, 414, 14);
-		getContentPane().add(lblTitle);
 		
 		JPanel pGeneral = new JPanel();
-		pGeneral.setBounds(20, 36, 393, 223);
-		getContentPane().add(pGeneral);
+		pGeneral.setBounds(10, 25, 393, 223);
+		panel.add(pGeneral);
 		pGeneral.setLayout(null);
 		
 		JLabel lbljobName = new JLabel("NomeDoEstágio");
