@@ -21,8 +21,9 @@ import javax.swing.DefaultComboBoxModel;
 
 public class TelaCrudEstagio extends JInternalFrame {
 	private JTextField txtNome;
-	private JTextField txtLogin;
-	private JTextField txtSenha;
+	private JTextField txtDtInicio;
+	private JTextField txtInstituição;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -50,65 +51,64 @@ public class TelaCrudEstagio extends JInternalFrame {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		
-		JLabel lblTitulo = new JLabel("Usu\u00E1rio");
+		JLabel lblTitulo = new JLabel("Est\u00E1gio");
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblTitulo.setBounds(10, 11, 414, 14);
+		lblTitulo.setBounds(10, 11, 414, 20);
 		getContentPane().add(lblTitulo);
 		
 		JPanel painelCampos = new JPanel();
-		painelCampos.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Dados do Usu\u00E1rio", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		painelCampos.setBounds(10, 36, 299, 194);
+		painelCampos.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Dados do Est\u00E1gio", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		painelCampos.setBounds(10, 36, 299, 223);
 		getContentPane().add(painelCampos);
 		painelCampos.setLayout(null);
 		
 		JLabel lblNome = new JLabel("Nome : ");
-		lblNome.setBounds(10, 26, 46, 14);
+		lblNome.setBounds(10, 27, 46, 14);
 		painelCampos.add(lblNome);
 		
 		txtNome = new JTextField();
-		txtNome.setBounds(92, 23, 197, 20);
+		txtNome.setBounds(92, 22, 197, 20);
 		painelCampos.add(txtNome);
 		txtNome.setColumns(10);
 		
-		JLabel lblLogin = new JLabel("Login : ");
-		lblLogin.setBounds(10, 60, 46, 14);
-		painelCampos.add(lblLogin);
+		JLabel lblDtInicio = new JLabel("Data In\u00EDcio :");
+		lblDtInicio.setBounds(10, 68, 72, 14);
+		painelCampos.add(lblDtInicio);
 		
-		txtLogin = new JTextField();
-		txtLogin.setBounds(92, 57, 197, 20);
-		painelCampos.add(txtLogin);
-		txtLogin.setColumns(10);
+		txtDtInicio = new JTextField();
+		txtDtInicio.setBounds(92, 64, 197, 20);
+		painelCampos.add(txtDtInicio);
+		txtDtInicio.setColumns(10);
 		
-		txtSenha = new JTextField();
-		txtSenha.setColumns(10);
-		txtSenha.setBounds(92, 95, 197, 20);
-		painelCampos.add(txtSenha);
+		txtInstituição = new JTextField();
+		txtInstituição.setColumns(10);
+		txtInstituição.setBounds(92, 106, 197, 20);
+		painelCampos.add(txtInstituição);
 		
-		JLabel lblSenha = new JLabel("Senha : ");
-		lblSenha.setBounds(10, 98, 90, 14);
-		painelCampos.add(lblSenha);
+		JLabel lblInstituicao = new JLabel("Institui\u00E7\u00E3o :");
+		lblInstituicao.setBounds(10, 109, 119, 14);
+		painelCampos.add(lblInstituicao);
 		
 		JButton btnSalvar = new JButton("Salvar");
-		btnSalvar.setBounds(200, 160, 89, 23);
+		btnSalvar.setBounds(200, 189, 89, 23);
 		painelCampos.add(btnSalvar);
 		
 		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(102, 160, 89, 23);
+		btnCancelar.setBounds(92, 189, 89, 23);
 		painelCampos.add(btnCancelar);
 		
-		JLabel lblCategoria = new JLabel("Categoria : ");
-		lblCategoria.setBounds(10, 128, 90, 14);
+		JLabel lblCategoria = new JLabel("Professor Orientador :");
+		lblCategoria.setBounds(10, 150, 108, 14);
 		painelCampos.add(lblCategoria);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Administrador", "Atendente", "Gerente", "Veterin\u00E1rio"}));
-		comboBox.setSelectedIndex(1);
-		comboBox.setBounds(92, 124, 197, 22);
-		painelCampos.add(comboBox);
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(128, 148, 161, 20);
+		painelCampos.add(textField);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(319, 36, 105, 194);
+		panel.setBounds(319, 36, 105, 223);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
