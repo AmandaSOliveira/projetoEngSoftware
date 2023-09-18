@@ -22,7 +22,7 @@ import javax.swing.DefaultComboBoxModel;
 public class TelaCrudEstagio extends JInternalFrame {
 	private JTextField txtNome;
 	private JTextField txtDtInicio;
-	private JTextField txtInstituição;
+	private JTextField txtInstituicao;
 	private JTextField textField;
 
 	/**
@@ -81,10 +81,10 @@ public class TelaCrudEstagio extends JInternalFrame {
 		painelCampos.add(txtDtInicio);
 		txtDtInicio.setColumns(10);
 		
-		txtInstituição = new JTextField();
-		txtInstituição.setColumns(10);
-		txtInstituição.setBounds(92, 106, 197, 20);
-		painelCampos.add(txtInstituição);
+		txtInstituicao = new JTextField();
+		txtInstituicao.setColumns(10);
+		txtInstituicao.setBounds(92, 106, 197, 20);
+		painelCampos.add(txtInstituicao);
 		
 		JLabel lblInstituicao = new JLabel("Institui\u00E7\u00E3o :");
 		lblInstituicao.setBounds(10, 109, 119, 14);
