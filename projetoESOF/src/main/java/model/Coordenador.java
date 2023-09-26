@@ -1,24 +1,29 @@
 package model;
 import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "coordenador")
 public class Coordenador implements Serializable{	
 	private static final long serialVersionUID = 1L;
 	@Id
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String Cod_Coordenador;
+	@Column(name="Cod_Coordenador")
+	private String codigo;
 	private String Nome_Coordenador;
 	private String Email_Coordenador;
 	private String Fone_Coordenador;
 	
 	public Coordenador(String codCoordenador, String nomeCoordenador, String emailCoordenador, String foneCoordenador) {
 		super();
-		Cod_Coordenador = codCoordenador;
+		codigo = codCoordenador;
 		Nome_Coordenador = nomeCoordenador;
 		Email_Coordenador = emailCoordenador;
 		Fone_Coordenador = foneCoordenador;
@@ -27,10 +32,10 @@ public class Coordenador implements Serializable{
 	public Coordenador(){}
 	
 	public String getCodCoordenador() {
-		return Cod_Coordenador;
+		return codigo;
 	}
 	public void setCodCoordenador(String codCoordenador) {
-		Cod_Coordenador = codCoordenador;
+		codigo = codCoordenador;
 	}
 	public String getNomeCoordenador() {
 		return Nome_Coordenador;
