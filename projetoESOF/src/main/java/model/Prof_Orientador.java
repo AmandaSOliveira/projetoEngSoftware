@@ -4,6 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+/**
+ * Nome da classe não está correto... precisa ser ProfessorOrientador.
+ * utilize o @Table(name="Prof_Orientador") para resolver.
+ * 
+ * @author bruno
+ *
+ */
 public class Prof_Orientador implements Serializable{	
 	private static final long serialVersionUID = 1L;
 	@Id

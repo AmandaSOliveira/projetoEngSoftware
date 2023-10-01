@@ -17,6 +17,13 @@ public class Coordenador implements Serializable{
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Cod_Coordenador")
 	private String codigo;
+	/**
+	 * comentário prof. Bruno
+	 * Os nomes dos atributos precisam respeitar as regras da O.O
+	 * como não podem ficar iguais ao do banco de dados pode utilizar
+	 * a notação @Column como feito por você no atributo código, deve fazer para os demais.
+	 * nas duas classes
+	 */	
 	private String Nome_Coordenador;
 	private String Email_Coordenador;
 	private String Fone_Coordenador;
